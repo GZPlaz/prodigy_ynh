@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numeria · Teacher dashboard</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="teacher.css">
+  <script type="module" src="teacher.js"></script>
+</head>
+<body class="teacher">
+  <header class="topbar">
+    <div class="tb-brand"><span class="logo-sm">Numeria</span> <span class="t-sub">Teacher dashboard</span></div>
+    <div class="tb-stats"><span id="who" class="tb-gold"></span><a class="btn small" href="../">🎮 Open the game</a></div>
+  </header>
+  <main class="page">
+    <section class="card t-summary" id="summary"></section>
+    <section class="card">
+      <div class="t-toolbar">
+        <input id="filter" type="search" placeholder="Search players…" aria-label="Search players">
+        <button class="btn small" id="refresh">↻ Refresh</button>
+        <button class="btn small" id="csv">⬇ Export CSV</button>
+      </div>
+      <div class="t-table-wrap"><table class="t-table">
+        <thead><tr>
+          <th data-sort="username">Player</th><th data-sort="grade">Grade</th><th data-sort="level">Level</th>
+          <th data-sort="answered">Questions</th><th data-sort="accuracy">Accuracy</th>
+          <th>Needs practice</th><th data-sort="lastSeen">Last played</th><th></th>
+        </tr></thead>
+        <tbody id="rows"><tr><td colspan="8">Loading…</td></tr></tbody>
+      </table></div>
+    </section>
+  </main>
+</body>
+</html>
